@@ -1,0 +1,9 @@
+Huawei Health MCP
+Copyright (c) 2026 alexeykomissarov — MIT License, see LICENSE.
+
+The protocol of the Huawei Health app cloud (endpoints, headers, token rotation, response parsing,
+rebuilding workouts from per-minute segments) is ported from and7ey/huawei_health:
+  https://github.com/and7ey/huawei_health  (commit 8785391, 2026-10-02)
+  MIT License, Copyright (c) 2026 and7ey — full text in LICENSE-and7ey-huawei_health.
+
+This project is not affiliated with, endorsed or supported by Huawei.

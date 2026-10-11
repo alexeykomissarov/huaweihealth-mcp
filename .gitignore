@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.egg-info/
+dist/
+token.json
+tokens.json
+data/

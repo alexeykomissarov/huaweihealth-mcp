@@ -1,0 +1,31 @@
+[project]
+name = "huawei-mcp"
+version = "0.1.0"
+description = "Read-only MCP server for Huawei Health (the Health app's own cloud, unofficial)"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=1.30,<2",
+    "httpx>=0.28,<1",
+    "tzdata>=2024.1",
+]
+
+[project.urls]
+Repository = "https://github.com/alexeykomissarov/huaweihealth-mcp"
+
+[project.scripts]
+huawei-mcp = "huawei_mcp.server:main"
+huawei-mcp-login = "huawei_mcp.login:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.24"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/huawei_mcp"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
